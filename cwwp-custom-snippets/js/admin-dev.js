@@ -22,6 +22,8 @@ jQuery(document).ready(function($){
 		lineWrapping: 	true,
 		matchBrackets: 	true,
 		mode: 			'application/x-httpd-php-open',
+		onBlur:			function(){cwwp_code_editor.save()},
+		onFocus:		function(){cwwp_code_editor.save()},
 		tabMode: 		'shift',
 		theme:			'elegant'
 	});
