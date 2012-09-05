@@ -93,15 +93,27 @@ class CWWP_Custom_Snippets {
 		/** Store the object in a static property */
 		self::$instance = $this;
 		
+		/** Load the snippets file */
+		add_action( 'after_setup_theme', array( $this, 'file' ) );
+			
+		/** Load the plugin */
+		add_action( 'plugins_loaded', array( $this, 'init' ) );
+
+	}
+	
+	/**
+	 * Loads the custom snippets file.
+	 *
+	 * @since 1.0.0
+	 */
+	public function file() {
+	
 		/** Load the custom snippets file if exists; create it if it doesn't */
 		if ( $this->get_snippets_file() )
 			include $this->get_snippets_file();
 		else
 			$this->create_snippets_file();
-			
-		/** Load the plugin */
-		add_action( 'plugins_loaded', array( $this, 'init' ) );
-
+	
 	}
 		
 	/**
@@ -113,7 +125,7 @@ class CWWP_Custom_Snippets {
 	public function init() {
 	
 		/** Load the plugin textdomain for internationalizing strings */
-		load_plugin_textdomain( 'cwwp-custom-snippets', false, plugin_dir_path( __FILE__ ) . '/languages/' );
+		load_plugin_textdomain( 'cwwp-custom-snippets', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		
 		/** Load the plugin hooks and filters */
 		add_action( 'init', array( $this, 'post_type' ), 0 );
@@ -463,7 +475,7 @@ class CWWP_Custom_Snippets {
 	private function get_snippets_directory_path() {
 	
 		$uploads_dir 				= wp_upload_dir();
-		$snippets_dir				= explode( '/', untrailingslashit( plugin_dir_path( self::$file ) ) );
+		$snippets_dir				= explode( '/', untrailingslashit( dirname( plugin_basename( __FILE__ ) ) ) );
 		return self::$snippets_dir	= trailingslashit( $uploads_dir['basedir'] ) . array_pop( $snippets_dir );
 	
 	}
