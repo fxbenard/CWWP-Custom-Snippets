@@ -31,4 +31,9 @@ jQuery(document).ready(function($){
 		cwwp_code_editor.refresh();
 	});
 	
+	/** Make sure the code is saved before the submit event is fired */
+	$('#publish').click(function(){
+		cwwp_code_editor.save();
+	});
+	
 });
