@@ -55,23 +55,86 @@ class Cwwp_Init_Transport {
 	}
 	
 	/**
-	 * Callback function to create the import/export HTML page.
-	 *
-	 * @since 1.0.0
-	 */
-	public function import_export_page() {
-	
-	
-	
-	}
-	
-	/**
 	 * Callback function to load any necessary items in the
 	 * import/export page.
 	 *
 	 * @since 1.0.0
 	 */
 	public function import_export() {
+	
+		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
+	
+	}
+	
+	/**
+	 * Enqueues necessary scripts and styles for the import/export page.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @global int $id The current post ID
+	 * @global object $post The current post object
+	 */
+	public function assets() {
+	
+		global $id, $post;
+			
+		/** Register and enqueue scripts and styles */
+		$dev = WP_DEBUG || WP_SCRIP_DEBUG ? '-dev' : '';
+			
+		wp_register_script( 'cwwp-import-export', plugins_url( '/js/import-export' . $dev . '.js', dirname( dirname( __FILE__ ) ) ), array( 'jquery' ), '1.0.0', true );
+		wp_register_style( 'cwwp-import-export', plugins_url( '/css/import-export' . $dev . '.css', dirname( dirname( __FILE__ ) ) ) );
+		wp_enqueue_script( 'cwwp-import-export' );
+		wp_enqueue_style( 'cwwp-import-export' );
+	
+	}
+	
+	/**
+	 * Callback function to create the import/export HTML page.
+	 *
+	 * @since 1.0.0
+	 */
+	public function import_export_page() {
+	
+		echo '<div class="wrap cwwp-import-export">';
+			screen_icon();
+			echo '<h2>' . esc_html( get_admin_page_title() ) . '</h2>';
+			echo '<div class="cwwp-import-export-tabs">';
+				echo '<h2 class="nav-tab-wrapper">';
+					echo '<a href="#import" class="nav-tab">' . __( 'Import', 'cwwp-custom-snippets' ) . '</a>';
+					echo '<a href="#export" class="nav-tab">' . __( 'Export', 'cwwp-custom-snippets' ) . '</a>';
+				echo '</h2>';
+				echo '<div id="import" style="display: none;">';
+					echo $this->get_import_content();
+				echo '</div>';
+				echo '<div id="export" style="display: none;">';
+					echo $this->get_export_content();
+				echo '</div>';
+			echo '</div>';
+		echo '</div>';
+	
+	}
+	
+	/**
+	 * Returns the HTML content for the import tab.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string $html HTML content for the import tab
+	 */
+	private function get_import_content() {
+	
+	
+	
+	}
+	
+	/**
+	 * Returns the HTML content for the export tab.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string $html HTML content for the export tab
+	 */
+	private function get_export_content() {
 	
 	
 	
