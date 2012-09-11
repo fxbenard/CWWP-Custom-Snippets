@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CWWP Custom Snippets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-11 11:22+0100\n"
+"PO-Revision-Date: 2012-09-11 11:36+0100\n"
+"Last-Translator: FxB <fx@fxbenard.com>\n"
+"Language-Team: FxB <fx@fxbenard.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e;_n;"
+"_x;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Cwwp/Init/Admin.php:66
+msgid "Enter Your Code Snippet Title Here"
+msgstr "Entrer votre Code Snippet ici"
+
+#: Cwwp/Init/Admin.php:90 Cwwp/Init/Posttype.php:56
+msgid "Code Snippet"
+msgstr "Code Snippet"
+
+#: Cwwp/Init/Admin.php:91
+#, php-format
+msgid ""
+"Paste your code snippet into the code editor below. Leave out any opening "
+"(%s) and closing (%s) php tags."
+msgstr ""
+"Collez votre extrait de code dans l'éditeur de code ci-dessous. Laissez de "
+"côté toute ouverture (%s) et fermeture (%s) de balises php."
+
+#: Cwwp/Init/Admin.php:93
+msgid "Code Snippet Description"
+msgstr "Description Code Snippet."
+
+#: Cwwp/Init/Admin.php:94
+msgid ""
+"Describe your code snippet using the editor below. Although optional, it is "
+"highly recommended to do this for future reference."
+msgstr ""
+"Décrivez votre extrait de code en utilisant l'éditeur ci-dessous. Bien que "
+"facultatif, il est fortement recommandé de le faire pour toute référence "
+"ultérieure."
+
+#: Cwwp/Init/Posttype.php:55
+msgid "Code Snippets"
+msgstr "Code Snippets"
+
+#: Cwwp/Init/Posttype.php:57
+msgid "Add New"
+msgstr "Ajouter Nouveau"
+
+#: Cwwp/Init/Posttype.php:58
+msgid "Add New Code Snippet"
+msgstr "Ajouter un nouveau Code Snippet"
+
+#: Cwwp/Init/Posttype.php:59
+msgid "Edit Code Snippet"
+msgstr "Modifier Code Snippet"
+
+#: Cwwp/Init/Posttype.php:60
+msgid "New Code Snippet"
+msgstr "Nouveau Code Snippet"
+
+#: Cwwp/Init/Posttype.php:61
+msgid "View Code Snippet"
+msgstr "Voir Code Snippet"
+
+#: Cwwp/Init/Posttype.php:62
+msgid "Search Code Snippets"
+msgstr "Rechercher Code Snippets"
+
+#: Cwwp/Init/Posttype.php:63
+msgid "No Code Snippets found"
+msgstr "Aucun Code Snippet trouvé."
+
+#: Cwwp/Init/Posttype.php:64
+msgid "No Code Snippets found in trash"
+msgstr "Pas de Code Snippets trouvé dans la corbeille"
+
+#: Cwwp/Init/Posttype.php:66
+msgid "Snippets"
+msgstr "Snippets"
+
+#: Cwwp/Init/Posttype.php:98
+msgid "Title"
+msgstr "Titre"
+
+#: Cwwp/Init/Posttype.php:99
+msgid "Description"
+msgstr "Description"
+
+#: Cwwp/Init/Posttype.php:100
+msgid "Date"
+msgstr "Date"
+
+#: Cwwp/Init/Posttype.php:159 Cwwp/Init/Posttype.php:160
+msgid "Code snippet updated."
+msgstr "Code snippet mis à jour."
+
+#: Cwwp/Init/Posttype.php:161
+msgid "Code snippet published."
+msgstr "Code snippet publié."
+
+#: Cwwp/Init/Posttype.php:162
+msgid "Code snippet saved."
+msgstr "Code snippet sauvegardé."
+
+#: Cwwp/Init/Transport.php:51
+msgid "Import/Export Code Snippets"
+msgstr "Importer/Exporter Code Snippets"
+
+#: Cwwp/Init/Transport.php:51
+msgid "Import/Export"
+msgstr "Importer/Exporter"
+
+#: Cwwp/Init/Transport.php:103
+msgid "Import"
+msgstr "Importer"
+
+#: Cwwp/Init/Transport.php:104
+msgid "Export"
+msgstr "Exporter"
+
+#~ msgid ""
+#~ "You are currently enjoying a Wordpress site customize by FxB. Want the "
+#~ "know more? <a href=\"%s\" title=\"Click here to go to my website!\" "
+#~ "target=\"_blank\">Click here to go to my website!</a>"
+#~ msgstr ""
+#~ "Vous utilisez actuellement un site WordPress customisé par FxB. Vous "
+#~ "voulez en savoir plus ? <a href=\"%s\" title=\"Cliquez ici pour vous "
+#~ "visiter mon site !\" target=\"_blank\">Cliquez ici pour vous visiter mon "
+#~ "site !</a>"
